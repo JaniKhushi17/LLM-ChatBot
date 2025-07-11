@@ -3,42 +3,63 @@ A web-based chatbot powered by Facebook’s BlenderBot using Hugging Face Transf
 
 🚀 Features
 Conversational AI with contextual memory
+
 Powered by BlenderBot-400M from Meta
-Web frontend built with HTML, CSS, JS
+
+Web frontend built with HTML, CSS, and JavaScript
+
 Flask backend for message routing
-Uses Hugging Face transformers library
+
+Uses Hugging Face Transformers library
+
 🧠 How It Works
 User sends a message via the frontend
-Flask receives and routes it to the chatbot logic
-BlenderBot generates a response via transformers
-Response is rendered back to the UI
+
+Flask backend receives and routes the message to chatbot logic
+
+BlenderBot generates a response using the Transformers model
+
+Response is rendered back to the user interface
+
 📦 Installation
+bash
+Copy
+Edit
 git clone https://github.com/yourusername/my-llm-chatbot.git
 cd my-llm-chatbot
 
 python -m venv .venv
 source .venv/Scripts/activate  # For Windows
+# or
+source .venv/bin/activate      # For macOS/Linux
 
 pip install -r requirements.txt
 python app.py
 📁 Folder Structure
-
-bash``` ├── app.py # Flask app ├── chatbot.py # LLM logic ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ ├── css/style.css │ ├── script.js │ └── favicon.ico
-
-
----
-
+bash
+Copy
+Edit
+├── app.py              # Flask app
+├── chatbot.py          # LLM logic using BlenderBot
+├── requirements.txt
+├── templates/
+│   └── index.html      # Frontend HTML
+├── static/
+│   ├── css/
+│   │   └── style.css   # Styling
+│   ├── script.js       # Frontend JS
+│   └── favicon.ico
 🧪 Test via API
-
-bash```
+bash
+Copy
+Edit
 curl -X POST -H "Content-Type: application/json" \
      -d "{\"prompt\": \"Hello!\"}" \
      http://127.0.0.1:5000/chatbot
 🔗 Model Info
-
 Model: facebook/blenderbot-400M-distill
 
-Library: Hugging Face transformers
+Library: Hugging Face Transformers
 
 Framework: PyTorch
 
