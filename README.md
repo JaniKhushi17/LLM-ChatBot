@@ -1,30 +1,31 @@
-🤖 My LLM Chatbot
+# 🤖 My LLM Chatbot
+
 A web-based chatbot powered by Facebook’s BlenderBot using Hugging Face Transformers. This app processes user inputs and generates human-like responses using LLMs and Transformers.
 
-🚀 Features
-Conversational AI with contextual memory
+---
 
-Powered by BlenderBot-400M from Meta
+## 🚀 Features
 
-Web frontend built with HTML, CSS, and JavaScript
+- Conversational AI with contextual memory  
+- Powered by BlenderBot-400M from Meta  
+- Web frontend built with **HTML**, **CSS**, and **JavaScript**  
+- **Flask** backend for message routing  
+- Uses **Hugging Face Transformers** library  
 
-Flask backend for message routing
+---
 
-Uses Hugging Face Transformers library
+## 🧠 How It Works
 
-🧠 How It Works
-User sends a message via the frontend
+1. User sends a message via the frontend  
+2. Flask backend receives and routes the message to chatbot logic  
+3. BlenderBot generates a response using the Transformers model  
+4. Response is rendered back to the user interface  
 
-Flask backend receives and routes the message to chatbot logic
+---
 
-BlenderBot generates a response using the Transformers model
+## 📦 Installation
 
-Response is rendered back to the user interface
-
-📦 Installation
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/my-llm-chatbot.git
 cd my-llm-chatbot
 
@@ -35,10 +36,10 @@ source .venv/bin/activate      # For macOS/Linux
 
 pip install -r requirements.txt
 python app.py
+```
+
 📁 Folder Structure
-bash
-Copy
-Edit
+```bash
 ├── app.py              # Flask app
 ├── chatbot.py          # LLM logic using BlenderBot
 ├── requirements.txt
@@ -49,17 +50,18 @@ Edit
 │   │   └── style.css   # Styling
 │   ├── script.js       # Frontend JS
 │   └── favicon.ico
+```
+
 🧪 Test via API
-bash
-Copy
-Edit
+```bash
 curl -X POST -H "Content-Type: application/json" \
      -d "{\"prompt\": \"Hello!\"}" \
      http://127.0.0.1:5000/chatbot
+```
+
 🔗 Model Info
 Model: facebook/blenderbot-400M-distill
 
 Library: Hugging Face Transformers
 
 Framework: PyTorch
-
